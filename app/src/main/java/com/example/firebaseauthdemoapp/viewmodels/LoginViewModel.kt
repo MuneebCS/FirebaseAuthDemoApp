@@ -53,7 +53,6 @@ class LoginViewModel @Inject constructor(
         return when (e.errorCode) {
 
             "ERROR_INVALID_CREDENTIAL" -> "Invalid Credentials. Please try again."
-
             "ERROR_TOO_MANY_REQUESTS" -> "Too many requests have been made. Please try again later."
             "ERROR_OPERATION_NOT_ALLOWED" -> "The operation is not allowed. Please check your Firebase settings."
             "ERROR_NETWORK_REQUEST_FAILED" -> "Network error occurred. Please check your internet connection."
@@ -63,7 +62,7 @@ class LoginViewModel @Inject constructor(
 
 
     fun clearError() {
-        _errorMessage.value = "" // Clear the error message
+        _errorMessage.value = ""
     }
 
     private fun updateErrorState(message: String) {
