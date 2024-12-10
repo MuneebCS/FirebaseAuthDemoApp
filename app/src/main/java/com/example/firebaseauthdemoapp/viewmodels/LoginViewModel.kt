@@ -53,6 +53,8 @@ class LoginViewModel @Inject constructor(
         return when (e.errorCode) {
 
             "ERROR_INVALID_CREDENTIAL" -> "Invalid Credentials. Please try again."
+            "ERROR_USER_NOT_FOUND" -> "No user found with this email address."
+            "ERROR_INVALID_EMAIL" -> "The email address is invalid. Please enter a valid email."
             "ERROR_TOO_MANY_REQUESTS" -> "Too many requests have been made. Please try again later."
             "ERROR_OPERATION_NOT_ALLOWED" -> "The operation is not allowed. Please check your Firebase settings."
             "ERROR_NETWORK_REQUEST_FAILED" -> "Network error occurred. Please check your internet connection."
